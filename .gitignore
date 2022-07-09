@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# amplify 
+amplify/
+
+# node stuff
+package-lock.json
