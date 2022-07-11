@@ -23,19 +23,6 @@ function Home({ messages }) {
     };
 
     fetchUser();
-
-    // Subscribe to creation of message
-    const subscription = API.graphql(
-      graphqlOperation(onCreateMessage)
-    ).subscribe({
-      next: ({ provider, value }) => {
-        setStateMessages((stateMessages) => [
-          ...stateMessages,
-          value.data.onCreateMessage,
-        ]);
-      },
-      error: (error) => console.warn(error),
-    });
   }, []);
 
   useEffect(() => {
@@ -53,7 +40,25 @@ function Home({ messages }) {
     getMessages();
   }, [user]);
 
+  useEffect(() => {
+    // Subscribe to creation of message
+    const subscription = API.graphql(
+      graphqlOperation(onCreateMessage)
+    ).subscribe({
+      next: ({ provider, value }) => {
+        setStateMessages((stateMessages) => [
+          ...stateMessages,
+          value.data.onCreateMessage,
+        ]);
+      },
+      error: (error) => console.warn(error),
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
   const handleSubmit = async (event) => {
+
     // Prevent the page from reloading
     event.preventDefault();
 
@@ -75,9 +80,11 @@ function Home({ messages }) {
           input: input,
         },
       });
+      
     } catch (err) {
       console.error(err);
     }
+    
   };
 
   if (user) {
