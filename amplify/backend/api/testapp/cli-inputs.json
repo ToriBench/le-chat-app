@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "testapp",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\narom001\\Documents\\BBD Grad Resources\\Level Ups\\Security\\amplify next js chat app test\\New folder\\test-app\\amplify\\backend\\api\\testapp\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authtestappb42aae48"
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": []
+  }
+}
