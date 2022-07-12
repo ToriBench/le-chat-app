@@ -105,7 +105,7 @@ function Home({ messages }) {
     return (
       <div className={styles.background}>
         <div className={styles.container}>
-          <h1 className={styles.title}> AWS Amplify Live Chat</h1>
+          <h1 className={styles.title}>Le Chat</h1>
           <button onClick={handleSignOutButtonClick}>Sign out</button>
           <div className={styles.chatbox}>
             {stateMessages

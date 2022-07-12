@@ -8,17 +8,22 @@
 
 .container {
   display: flex;
-  height: 100%;
+  height: fit-content;
   width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   max-width: 520px;
+  border-style: inset;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color:aliceblue;
 }
 
 .title {
   font-size: 3rem;
+  font-family: cursive;
   line-height: 1.25;
   margin-bottom: 1rem;
   font-family: roboto;
