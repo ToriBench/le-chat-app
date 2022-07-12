@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lechat-dev-73812-authRole",
+      "UnauthRoleArn": "arn:aws:iam::229582503298:role/amplify-lechat-dev-73812-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::229582503298:role/amplify-lechat-dev-73812-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-lechat-dev-73812-deployment",
+      "UnauthRoleName": "amplify-lechat-dev-73812-unauthRole",
+      "StackName": "amplify-lechat-dev-73812",
+      "StackId": "arn:aws:cloudformation:eu-west-1:229582503298:stack/amplify-lechat-dev-73812/d3408a40-01a4-11ed-a29b-0204785ecb99",
+      "AmplifyAppId": "d336nm9c8r8769"
+    },
+    "categories": {
+      "auth": {
+        "lechat906a4ee2": {}
+      }
+    }
+  }
+}
