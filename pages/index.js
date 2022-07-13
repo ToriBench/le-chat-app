@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
-import { withAuthenticator } from "@aws-amplify/ui-react";
+import { withAuthenticator, Button } from "@aws-amplify/ui-react";
 import '@aws-amplify/ui-react/styles.css'; 
 import { API, Auth, withSSRContext, graphqlOperation, Hub } from "aws-amplify";
 import { listMessages } from "../graphql/queries";
@@ -8,7 +8,7 @@ import { createMessage } from "../graphql/mutations";
 import Message from "../components/message";
 import { onCreateMessage } from "../graphql/subscriptions";
 
-function Home({ messages }) {
+function Home({ messages, signOut }) {
   const [stateMessages, setStateMessages] = useState([...messages]);
   const [messageText, setMessageText] = useState("");
   const [user, setUser] = useState(null);
@@ -105,8 +105,8 @@ function Home({ messages }) {
     return (
       <div className={styles.background}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Le Chat</h1>
-          <button onClick={handleSignOutButtonClick}>Sign out</button>
+        <h1 className={styles.title}>Le Chat</h1>
+          <Button onClick={signOut}>Sign out</Button>
           <div className={styles.chatbox}>
             {stateMessages
               // sort messages oldest to newest client-side
@@ -145,7 +145,7 @@ function Home({ messages }) {
   }
 }
 
-export default withAuthenticator(Home);
+export default withAuthenticator(Home, true);
 
 export async function getServerSideProps({ req }) {
   // wrap the request in a withSSRContext to use Amplify functionality serverside.

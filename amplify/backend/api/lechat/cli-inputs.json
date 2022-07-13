@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "lechat",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\narom001\\Documents\\BBD Grad Resources\\Level Ups\\Security\\amplify next js chat app test\\New folder (3)\\le-chat\\amplify\\backend\\api\\lechat\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authlechat906a4ee2"
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": []
+  }
+}
