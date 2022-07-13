@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3lechatstorage117b6af8",
+  "bucketName": "lechat-storage-117b6af8",
+  "policyUUID": "2c3d519f",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "READ"
+  ]
+}

@@ -8,7 +8,15 @@ export default function Message({ message, isMe }) {
         isMe ? styles.sentMessageContainer : styles.receivedMessageContainer
       }
     >
-      <p className={styles.senderText}>{message.owner}</p>
+      <div
+        className={
+          isMe ? styles.sentMessageHeader : styles.receivedMessageHeader
+        }
+      >
+        <p className={styles.senderText}>{isMe ? "": (message.owner)}  </p>
+        <p className={styles.senderTime}>{new Date(message.createdAt).getHours() + ':' + new Date(message.createdAt).getMinutes().toString().replace(/^(\d)$/, '0$1')}</p>
+    
+      </div>
       <div className={isMe ? styles.sentMessage : styles.receivedMessage}>
         <p>{message.message}</p>
       </div>
