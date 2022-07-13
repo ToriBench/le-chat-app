@@ -1,6 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Le Chat App
+
+Le Chat App is a real-time chat app, with the goal of allowing users to share their passion and love of cats. Users can log using their email addresses allowing them to share messages to a global chat. 
+
+The app was built and deployed using [AWS Amplify](https://aws.amazon.com/amplify/). Amplify is a set of tools that can be used to quickly create scalable, serverless applications using various AWS services and popular front-end frameworks like React and Angular. 
 
 ## Getting Started
+
+Before starting, please see wiki for running the project locally. Also talk to one of our group members if you have any problems setting setting up Amplify and pulling the project. 
 
 First, run the development server:
 
